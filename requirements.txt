@@ -1,0 +1,7 @@
+streamlit
+opencv-python
+numpy
+torch
+detectron2 @ git+https://github.com/facebookresearch/detectron2.git
+gdown
+Pillow
