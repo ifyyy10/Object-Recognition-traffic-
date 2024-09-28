@@ -1,11 +1,8 @@
-!pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0
-
 import streamlit as st
 import gdown
 import os
 import cv2
 import numpy as np
-import torch
 from detectron2.config import get_cfg
 from detectron2.engine import DefaultPredictor
 from detectron2.visualizer import Visualizer
