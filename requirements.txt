@@ -1,6 +1,6 @@
 streamlit
-torch==2.4.0
-torchvision==0.19.0
+torch==2.4.0+cpu
+torchvision==0.19.0+cpu
 torchaudio==2.4.0
 detectron2 @ git+https://github.com/facebookresearch/detectron2.git@main
 opencv-python
