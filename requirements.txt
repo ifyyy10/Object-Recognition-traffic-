@@ -1,7 +1,7 @@
 streamlit==1.38.0
-torch==2.0.0+cu118
-torchvision==0.15.0+cu118
-torchaudio==2.0.0+cu118
+torch @ https://download.pytorch.org/whl/cpu/torch-2.0.0%2Bcpu-cp38-cp38-linux_x86_64.whl
+torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.15.0%2Bcpu-cp38-cp38-linux_x86_64.whl
+torchaudio @ https://download.pytorch.org/whl/cpu/torchaudio-2.0.0%2Bcpu-cp38-cp38-linux_x86_64.whl
 Pillow>=7.1
 matplotlib
 opencv-python
