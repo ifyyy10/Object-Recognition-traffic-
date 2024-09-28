@@ -18,9 +18,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         # Install PyTorch first
-        pip install torch torchvision torchaudio
+        pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0
         # Now install detectron2
         pip install detectron2 @ git+https://github.com/facebookresearch/detectron2.git@main
+        # Install other dependencies from requirements.txt if needed
         pip install -r requirements.txt
     - name: Analysing the code with pylint
       run: |
@@ -28,7 +29,6 @@ jobs:
     - name: Check if Streamlit runs
       run: |
         streamlit run path_to_your_app.py --headless
-
 
 
 
