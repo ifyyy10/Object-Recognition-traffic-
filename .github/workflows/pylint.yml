@@ -1,23 +1,44 @@
-name: Pylint
+name: CI Pipeline
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
-  build:
+  lint-build-test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
     steps:
+    # Checkout the code from the repo
     - uses: actions/checkout@v4
+
+    # Set up Python with the matrix versions
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+
+    # Install dependencies from requirements.txt
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pylint
-    - name: Analysing the code with pylint
+        pip install -r requirements.txt
+
+    # Clone the Detectron2 repository
+    - name: Clone Detectron2
+      run: |
+        git clone https://github.com/facebookresearch/detectron2.git
+        cd detectron2
+        pip install -e .
+
+    # Run pylint to check the code
+    - name: Run pylint
       run: |
         pylint $(git ls-files '*.py')
+
+    # OPTIONAL: Run Streamlit to verify it works
+    - name: Check if Streamlit runs
+      run: |
+        streamlit run path_to_your_app.py --headless
+
+
