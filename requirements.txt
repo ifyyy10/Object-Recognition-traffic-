@@ -2,8 +2,9 @@ streamlit
 torch==2.4.0+cpu
 torchvision==0.19.0+cpu
 torchaudio==2.4.0
-detectron2 @ git+https://github.com/facebookresearch/detectron2.git@main
+detectron2==0.6 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu118/torch2.4/index.html
 opencv-python
 numpy
 gdown
 Pillow
+
