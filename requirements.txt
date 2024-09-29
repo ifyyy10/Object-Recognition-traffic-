@@ -1,7 +1,7 @@
 pyyaml==5.1
 torch==2.4.0
 torchvision==0.19.0
--f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
+-f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.9/index.html
 torchaudio==2.4.0
 Pillow>=7.1
 matplotlib
