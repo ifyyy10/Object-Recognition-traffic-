@@ -5,7 +5,7 @@ numpy
 gdown
 Pillow
 
--f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
+
 #pyyaml==5.1
 #torch==1.10.0
 #torchvision==0.11.0
@@ -13,5 +13,5 @@ Pillow
 
 opencv-contrib-python-headless
 
-detectron2
+detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html
 
