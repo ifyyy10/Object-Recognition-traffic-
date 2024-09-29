@@ -1,5 +1,8 @@
 torch==2.4.1
 torchvision==0.19.1
+opencv-python
+numpy
+gdown
 
 #-f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.10/index.html
 #pyyaml==5.1
