@@ -1,4 +1,4 @@
-import torch,torchvision
+import torch,torchvision, torchaudio
 import streamlit as st
 import gdown
 import os
